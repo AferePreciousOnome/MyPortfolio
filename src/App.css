@@ -1,0 +1,66 @@
+/* App.css */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #0f172a;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 1rem 2rem;
+  flex: 1;
+}
+
+/* Tighten spacing between sections */
+.content section {
+  margin-bottom: 2rem; /* You can reduce this even more if needed */
+}
+
+/* Remove unnecessary top margins from headings */
+.content h1,
+.content h2,
+.content h3,
+.content p {
+  margin-top: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  }
+}

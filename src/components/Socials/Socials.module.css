@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.socials a {
+  color: #94a3b8;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .socials {
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .socials a {
+    font-size: 1.5rem;
+  }
+}
