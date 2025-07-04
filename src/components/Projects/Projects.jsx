@@ -13,13 +13,25 @@ const projects = [
       " Google Gemini AI (for generating CV content)",
     ],
     link: "https://github.com/SyedArslanHaider/smart-cv-builder",
+    image: "/images/cvPathfolio.png",
   },
   {
-    title: "Task Tracker",
+    title: "TinyThought",
     description:
-      "Full-stack Task Tracker with JWT authentication and bcrypt security.",
-    tech: ["Postresql", "Express", "React", "Node.js"],
-    link: "https://github.com/AferePreciousOnome/task-tracker",
+      "Sentiment-aware journaling app with mood tracking and authentication.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+      "Recharts",
+      "CSS Modules",
+      "Sentiment (npm)",
+      "Yup",
+    ],
+    link: "https://github.com/AferePreciousOnome/TinyThought_website",
+    image: "/images/tinyThought.png",
   },
 ];
 
@@ -28,8 +40,13 @@ const Projects = () => {
     <section className={styles.projectsSection} id="projects">
       <h2 className={styles.title}>Projects</h2>
       <div className={styles.grid}>
-        {projects.map((project, idx) => (
-          <div key={idx} className={styles.card}>
+        {projects.map((project, index) => (
+          <div key={index} className={styles.card}>
+            <img
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              className={styles.cardImage}
+            />
             <h3 className={styles.cardTitle}>{project.title}</h3>
             <p className={styles.description}>{project.description}</p>
             <ul className={styles.techList}>

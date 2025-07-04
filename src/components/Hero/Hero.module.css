@@ -37,18 +37,21 @@
 
 .hero-buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 1rem;
-  margin-top: 1rem;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
 }
+
 .btn {
+  max-width: 220px;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
+  text-align: center;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .primary-btn {
@@ -68,6 +71,35 @@
 .secondary-btn:hover {
   background-color: #38bdf8;
   color: #0f172a;
+}
+.cv-btn {
+  margin-top: 2rem;
+}
+.resume-link {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #38bdf8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.resume-link:hover {
+  border-bottom-color: #0ea5e9;
+  color: #0ea5e9;
+}
+
+.arrow-icon {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.resume-link:hover .arrow-icon {
+  transform: translateX(4px);
 }
 
 .socials-mobile {
@@ -98,5 +130,11 @@
   }
   .hero-buttons {
     display: none;
+  }
+
+  .btn {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
   }
 }

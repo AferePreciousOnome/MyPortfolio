@@ -1,5 +1,6 @@
 import { useSpring, animated } from "@react-spring/web";
 import styles from "./Hero.module.css";
+import { FaArrowRight } from "react-icons/fa";
 import Socials from "../Socials/Socials";
 
 const Hero = () => {
@@ -35,6 +36,17 @@ const Hero = () => {
             className={`${styles.btn} ${styles["secondary-btn"]}`}
           >
             Contact Me
+          </a>
+        </div>
+
+        <div className={styles["cv-btn"]}>
+          <a
+            href="/PreciousPortfolio.pdf"
+            className={styles["resume-link"]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume <FaArrowRight className={styles["arrow-icon"]} />
           </a>
         </div>
       </animated.div>
