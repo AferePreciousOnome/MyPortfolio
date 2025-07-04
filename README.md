@@ -34,7 +34,6 @@ src/
 │ ├── Projects/
 │ ├── Contact/
 │ └── Socials/
-├── assets/
 └── App.jsx
 
 ```
