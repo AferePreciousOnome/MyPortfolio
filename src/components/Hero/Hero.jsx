@@ -1,6 +1,7 @@
 import { useSpring, animated } from "@react-spring/web";
-import styles from "./Hero.module.css";
 import { FaArrowRight } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+import styles from "./Hero.module.css";
 import Socials from "../Socials/Socials";
 
 const Hero = () => {
@@ -15,9 +16,23 @@ const Hero = () => {
     <section className={styles.hero} id="hero">
       <animated.div className={styles["hero-inner"]} style={fadeIn}>
         <h1 className={styles["hero-title"]}>Hi, I'm Precious Onome Afere</h1>
+
         <p className={styles["hero-subtitle"]}>
-          A full-stack developer passionate about building responsive web apps
-          and collaborating on meaningful projects.
+          <Typewriter
+            words={[
+              "Full-Stack Developer",
+              "React & Node.js Enthusiast",
+              "Open to Internships & Freelance",
+              "Lifelong Learner",
+              "Tech Problem Solver",
+            ]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1200}
+          />
         </p>
 
         <div className={styles["socials-mobile"]}>
@@ -50,6 +65,11 @@ const Hero = () => {
           </a>
         </div>
       </animated.div>
+
+      <div className={styles["scroll-indicator"]}>
+        <span>Scroll Down</span>
+        <div className={styles["arrow-down"]}></div>
+      </div>
     </section>
   );
 };

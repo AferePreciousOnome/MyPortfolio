@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
@@ -8,6 +8,19 @@
   box-sizing: border-box;
   position: relative;
   margin: 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-inner {
@@ -19,19 +32,23 @@
   gap: 1.5rem;
   padding: 0 2rem;
   margin: 0 auto;
-  margin-bottom: 0;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #38bdf8;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   color: #94a3b8;
-  text-align: justify;
+  text-align: center;
   max-width: 700px;
 }
 
@@ -52,6 +69,12 @@
   text-align: center;
   transition: all 0.3s ease;
   white-space: nowrap;
+  transform: translateY(0);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
 }
 
 .primary-btn {
@@ -72,9 +95,11 @@
   background-color: #38bdf8;
   color: #0f172a;
 }
+
 .cv-btn {
   margin-top: 2rem;
 }
+
 .resume-link {
   font-weight: 600;
   font-size: 1.1rem;
@@ -102,8 +127,42 @@
   transform: translateX(4px);
 }
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  animation: bounce 2s infinite;
+}
+
+.arrow-down {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #94a3b8;
+  margin-top: 4px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
 .socials-mobile {
-  display: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -118,16 +177,8 @@
 
   .hero-title {
     font-size: 1.5rem;
-    font-weight: 700;
-    color: #f1f5f9;
   }
 
-  .socials-mobile {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
   .hero-buttons {
     display: none;
   }
@@ -136,5 +187,15 @@
     flex: none;
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
   }
 }
