@@ -131,10 +131,13 @@
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   text-align: center;
   color: #94a3b8;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   animation: bounce 2s infinite;
 }
 
@@ -151,10 +154,10 @@
 @keyframes bounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
   50% {
-    transform: translateY(8px);
+    transform: translate(-50%, 8px);
   }
 }
 
@@ -187,6 +190,11 @@
     flex: none;
     width: 100%;
     max-width: 100%;
+  }
+
+  .scroll-indicator {
+    font-size: 0.8rem;
+    bottom: 2rem;
   }
 }
 
