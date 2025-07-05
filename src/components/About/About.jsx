@@ -19,7 +19,7 @@ const About = () => {
       </p>
       <p className={styles.text}>
         Outside of development, I enjoy movies, romance novels, and word puzzle
-        games. I'm also passionate about languages and culture—especially
+        games. I'm also passionate about languages and culture especially
         learning phrases from regions I admire, like Thailand. I'm enthusiastic
         about collaborating with innovative teams and contributing to impactful
         projects.

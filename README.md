@@ -1,73 +1,92 @@
-# Precious Onome Afere - Developer Portfolio 
+# Precious Onome Afere – Developer Portfolio
 
-Welcome to my developer portfolio! This is a fully responsive web portfolio built with **React**, showcasing my background, projects, skills, and contact information. Designed with modern UI/UX and subtle animations to enhance the user experience.
+Welcome to my personal web developer portfolio, built with **React** and styled using **CSS Modules**. This fully responsive site is designed to showcase my journey, projects, and skill set with a strong focus on clean UI/UX, accessibility, and interactive animations.
 
-##  Overview
+---
 
-This portfolio serves as my digital resume — highlighting:
+## Highlights
 
-- My journey into tech (Graduated from Migracode Barcelona bootcamp )
-- Projects I've worked on
-- Skills in modern web development technologies
-- Contact and social links
+- Fully responsive design
+- Gradient text with `background-clip: text` for modern aesthetic
+- Dynamic Typewriter effect in Hero section
+- Mobile-first layout with conditional rendering
+- Modular components and maintainable codebase
+
+---
+
+## Overview
+
+This portfolio serves as my digital resume, showcasing:
+
+- My path into tech (Graduated from **Migracode Barcelona** bootcamp)
+- Real-world projects
+- Tech stack and development skills
+- How to contact or collaborate with me
 
 ---
 
 ## Tech Stack
 
 - **Frontend**: React, HTML5, CSS Modules
-- **Animations**: React Spring
+- **Animations**: React Spring, React Simple Typewriter
 - **Icons**: React Icons
-- **Styling**: Custom CSS with responsive design and transitions
+- **Styling**: Custom CSS (Responsive with media queries)
 - **Version Control**: Git & GitHub
 
 ---
 
-##  Project Structure
+## Project Structure
+
 ```js
 src/
 ├── components/
-│ ├── Hero/
-│ ├── Sidebar/
-│ ├── About/
-│ ├── Skills/
-│ ├── Projects/
-│ ├── Contact/
-│ └── Socials/
+│   ├── About/
+│   ├── Contact/
+│   ├── Hero/
+│   ├── Projects/
+│   ├── Sidebar/
+│   ├── Skills/
+│   └── Socials/
 └── App.jsx
 
 ```
 
 ---
 
-##  Features
+## Features
 
-###  About Section
+### About Section
+
 - Responsive layout with adaptive font sizes
 - Includes a personal story and education background (Migracode Barcelona)
 
-###  Skills
+### Skills
+
 - Grid layout of tools/technologies (HTML, CSS, JavaScript, React, MongoDB, PostgreSQL, etc.)
 - Hover animations on each skill card
 - Fully responsive with mobile-optimized cards
 
 ### Projects
+
 - Dynamic card layout for showcasing projects
 - Technologies used per project listed as tags
 - Hover effects for depth and interactivity
 
 ### Contact Section
+
 - Clear call-to-action with styled email block
 - Copy-to-clipboard functionality for the email address
 - Responsive for all screen sizes
 
-###  Socials
+### Socials
+
 - Social icons shown:
   - Inside **Sidebar** on large screens
   - Inside **Hero** on mobile view only
 - Icons animate on hover with subtle effects
 
-###  Sidebar Navigation
+### Sidebar Navigation
+
 - Fixed left sidebar for large screens (250px)
 - Animated on mount (`slideInLeft`)
 - Hidden via media query on screens smaller than `768px`
@@ -75,13 +94,13 @@ src/
 
 ---
 
-##  About Me
+## About Me
 
 I’m **Precious Onome Afere**, a full-stack developer with a passion for clean code, responsive design, and continuous learning. I completed a one-year intensive bootcamp at **Migracode Barcelona**, where I gained hands-on experience with modern technologies and built real-world projects in a collaborative environment.
 
 ---
 
-##  Responsive Design
+## Responsive Design
 
 - Uses media queries to adapt layout:
   - Sidebar hidden on mobile
@@ -92,10 +111,23 @@ I’m **Precious Onome Afere**, a full-stack developer with a passion for clean 
 
 ## Getting Started
 
-``` js
+```js
 git clone https://github.com/your-username/your-portfolio.git
 cd your-portfolio
 npm install
 npm start
 ```
 
+# Contributing
+
+This is a personal project, but if you'd like to suggest improvements or report bugs, feel free to open an issue or PR.
+
+# Contact
+
+Let’s connect and build something amazing!
+
+- [LinkedIn](https://www.linkedin.com/in/afere-precious-3929a0306/)
+- [GitHub](https://github.com/AferePreciousOnome)
+- Email: preciousafere@gmail.com
+
+Designed and developed with 💙 by Precious Onome Afere
