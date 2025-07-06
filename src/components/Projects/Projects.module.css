@@ -68,10 +68,17 @@
   font-size: 0.875rem;
 }
 
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .link {
   color: #38bdf8;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 .link:hover {

@@ -13,6 +13,7 @@ const projects = [
       " Google Gemini AI (for generating CV content)",
     ],
     link: "https://github.com/SyedArslanHaider/smart-cv-builder",
+    liveDemo: "https://deploy-preview-103--smart-cv-migracode.netlify.app",
     image: "/images/cvPathfolio.png",
   },
   {
@@ -32,6 +33,15 @@ const projects = [
     ],
     link: "https://github.com/AferePreciousOnome/TinyThought_website",
     image: "/images/tinyThought.png",
+  },
+  {
+    title: "Egg Timer App",
+    description:
+      "An intuitive and fun egg timer app that helps you perfectly cook different types of eggs , soft-boiled, hard-boiled, scrambled, or fried.",
+    tech: ["React", "CSS Modules", "JavaScript", "HTML5 Audio API"],
+    link: "https://github.com/AferePreciousOnome/eggTimer",
+    liveDemo: "https://egg-timer-qmmz.vercel.app/",
+    image: "/images/eggTimer.png",
   },
 ];
 
@@ -54,14 +64,26 @@ const Projects = () => {
                 <li key={i}>{tech}</li>
               ))}
             </ul>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              View Project →
-            </a>
+            <div className={styles.links}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                GitHub →
+              </a>
+              {project.liveDemo && (
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  Live Demo →
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
