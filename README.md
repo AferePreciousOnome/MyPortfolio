@@ -112,7 +112,7 @@ I’m **Precious Onome Afere**, a full-stack developer with a passion for clean 
 ## Getting Started
 
 ```js
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/AferePreciousOnome/your-portfolio.git
 cd your-portfolio
 npm install
 npm start
