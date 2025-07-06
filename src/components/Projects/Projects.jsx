@@ -40,7 +40,7 @@ const projects = [
       "An intuitive and fun egg timer app that helps you perfectly cook different types of eggs , soft-boiled, hard-boiled, scrambled, or fried.",
     tech: ["React", "CSS Modules", "JavaScript", "HTML5 Audio API"],
     link: "https://github.com/AferePreciousOnome/eggTimer",
-    liveDemo: "https://egg-timer-qmmz.vercel.app/",
+    liveDemo: "https://eggtimerbyprecious.vercel.app/",
     image: "/images/eggTimer.png",
   },
 ];
