@@ -5,27 +5,21 @@ import styles from "./Hero.module.css";
 import Socials from "../Socials/Socials";
 
 const Hero = () => {
-  const items = [
-    <h1 key="title" className={styles["hero-title"]}>
-      Hi, I'm Precious Onome Afere
-    </h1>,
-    <p key="subtitle" className={styles["hero-subtitle"]}>
-      <Typewriter
-        words={[
-          "Full-Stack Developer",
-          "React & Node.js Enthusiast",
-          "Open to Internships & Freelance",
-          "Lifelong Learner",
-          "Tech Problem Solver",
-        ]}
-        loop={0}
-        cursor
-        cursorStyle="|"
-        typeSpeed={70}
-        deleteSpeed={50}
-        delaySpeed={1200}
-      />
-    </p>,
+  const titleSpring = useSpring({
+    from: { opacity: 0, transform: "translateY(-10px)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+    delay: 300,
+    reset: false,
+  });
+
+  const imageSpring = useSpring({
+    from: { opacity: 0, transform: "translateY(20px) scale(0.95)" },
+    to: { opacity: 1, transform: "translateY(0) scale(1)" },
+    delay: 500,
+    reset: false,
+  });
+
+  const trailItems = [
     <div key="buttons" className={styles["hero-buttons"]}>
       <a href="#projects" className={`${styles.btn} ${styles["primary-btn"]}`}>
         View Projects
@@ -46,18 +40,12 @@ const Hero = () => {
     </div>,
   ];
 
-  const imageSpring = useSpring({
-    from: { opacity: 0, transform: "translateY(20px) scale(0.95)" },
-    to: { opacity: 1, transform: "translateY(0) scale(1)" },
-    delay: 500,
-    reset: false,
-  });
-
-  const trail = useTrail(items.length, {
+  const trail = useTrail(trailItems.length, {
     from: { opacity: 0, transform: "translateY(20px)" },
     to: { opacity: 1, transform: "translateY(0)" },
-    delay: 700,
+    delay: 600,
     reset: false,
+    immediate: false,
   });
 
   return (
@@ -75,9 +63,31 @@ const Hero = () => {
       </animated.div>
 
       <div className={styles["hero-text"]}>
+        <animated.h1 className={styles["hero-title"]} style={titleSpring}>
+          Hi, I'm Precious Onome Afere
+        </animated.h1>
+
+        <p className={styles["hero-subtitle"]}>
+          <Typewriter
+            words={[
+              "Full-Stack Developer",
+              "React & Node.js Enthusiast",
+              "Open to Internships & Freelance",
+              "Lifelong Learner",
+              "Tech Problem Solver",
+            ]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1200}
+          />
+        </p>
+
         {trail.map((style, index) => (
           <animated.div key={index} style={style}>
-            {items[index]}
+            {trailItems[index]}
           </animated.div>
         ))}
 
