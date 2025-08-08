@@ -50,49 +50,51 @@ const Hero = () => {
 
   return (
     <section className={styles.hero} id="hero">
-      <animated.div
-        className={styles["hero-image-wrapper"]}
-        style={imageSpring}
-      >
-        <img
-          src="/images/portfolioImg.png"
-          alt="Hero"
-          className={styles["hero-image"]}
-        />
-        <div className={styles["image-shadow"]}></div>
-      </animated.div>
-
-      <div className={styles["hero-text"]}>
-        <animated.h1 className={styles["hero-title"]} style={titleSpring}>
-          Hi, I'm Precious Onome Afere
-        </animated.h1>
-
-        <p className={styles["hero-subtitle"]}>
-          <Typewriter
-            words={[
-              "Full-Stack Developer",
-              "React & Node.js Enthusiast",
-              "Open to Internships & Freelance",
-              "Lifelong Learner",
-              "Tech Problem Solver",
-            ]}
-            loop={0}
-            cursor
-            cursorStyle="|"
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1200}
+      <div className={styles["hero-inner"]}>
+        <animated.div
+          className={styles["hero-image-wrapper"]}
+          style={imageSpring}
+        >
+          <img
+            src="/images/portfolioImg.png"
+            alt="Hero"
+            className={styles["hero-image"]}
           />
-        </p>
+          <div className={styles["image-shadow"]}></div>
+        </animated.div>
 
-        {trail.map((style, index) => (
-          <animated.div key={index} style={style}>
-            {trailItems[index]}
-          </animated.div>
-        ))}
+        <div className={styles["hero-text"]}>
+          <animated.h1 className={styles["hero-title"]} style={titleSpring}>
+            Hi, I'm Precious Onome Afere
+          </animated.h1>
 
-        <div className={styles["socials-mobile"]}>
-          <Socials />
+          <p className={styles["hero-subtitle"]}>
+            <Typewriter
+              words={[
+                "Full-Stack Developer",
+                "React & Node.js Enthusiast",
+                "Open to Internships & Freelance",
+                "Lifelong Learner",
+                "Tech Problem Solver",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1200}
+            />
+          </p>
+
+          {trail.map((style, index) => (
+            <animated.div key={index} style={style}>
+              {trailItems[index]}
+            </animated.div>
+          ))}
+
+          <div className={styles["socials-mobile"]}>
+            <Socials />
+          </div>
         </div>
       </div>
 
