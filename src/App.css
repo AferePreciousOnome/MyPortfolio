@@ -8,6 +8,8 @@ body {
   color: #f8fafc;
   scroll-behavior: smooth;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .layout {
@@ -34,12 +36,10 @@ body {
   flex: 1;
 }
 
-/* Tighten spacing between sections */
 .content section {
-  margin-bottom: 2rem; /* You can reduce this even more if needed */
+  margin-bottom: 2rem;
 }
 
-/* Remove unnecessary top margins from headings */
 .content h1,
 .content h2,
 .content h3,
@@ -47,7 +47,6 @@ body {
   margin-top: 0;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
