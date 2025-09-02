@@ -30,7 +30,7 @@ const Hero = () => {
     </div>,
     <div key="cv" className={styles["cv-btn"]}>
       <a
-        href="/PreciousCV.pdf"
+        href="/PreciousOnomeCV.pdf"
         className={styles["resume-link"]}
         target="_blank"
         rel="noopener noreferrer"
@@ -72,8 +72,8 @@ const Hero = () => {
             <Typewriter
               words={[
                 "Full-Stack Developer",
-                "React & Node.js Enthusiast",
-                "Open to Internships & Freelance",
+                "React & Node.js",
+                "Open to Opportunities",
                 "Lifelong Learner",
                 "Tech Problem Solver",
               ]}
